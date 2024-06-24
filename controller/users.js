@@ -160,7 +160,7 @@ module.exports = {
     const decoded= jwt.verify(tokenCookie,process.env.ACCESS_TOKEN_SECRET);
     db.query('SELECT * FROM users where iduser=?', decoded.iduser, function (error,results,fields){
         if (error) throw error;
-        return res.send({username:results[0].username,iduser:results[0].iduser,useremail:results[0].useremail,weight:results[0].weight,height:results[0].height,gender:results[0].gender,goal:results[0].goal,metabolism:results[0].metabolism,vitamins:results[0].vitamins,magnesium:results[0].magnesium,screentime:results[0].screentime,smoking:results[0].smoking,sleephrs:results[0].sleephrs,allergies:results[0].allergies,diet:results[0].diet,healthcomplications:results[0].healthcomplications,pastprescriptions:results[0].pastprescriptions,newrescriptions:results[0].newrescriptions})
+        return res.send({username:results[0].username,age:results[0].age,iduser:results[0].iduser,useremail:results[0].useremail,weight:results[0].weight,height:results[0].height,gender:results[0].gender,goal:results[0].goal,metabolism:results[0].metabolism,vitamins:results[0].vitamins,magnesium:results[0].magnesium,screentime:results[0].screentime,smoking:results[0].smoking,sleephrs:results[0].sleephrs,allergies:results[0].allergies,diet:results[0].diet,healthcomplications:results[0].healthcomplications,pastprescriptions:results[0].pastprescriptions,newrescriptions:results[0].newrescriptions})
     })
   },
   logout:(req,res)=>{
