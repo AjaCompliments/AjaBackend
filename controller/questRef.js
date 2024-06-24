@@ -1,4 +1,4 @@
-const questRefModel=require("../database/index.js");
+const questRefModel=require("../models/questRefModel");
 module.exports={
     getAllQuestRefs:(req,res)=>{
         questRefModel.getAllQuestRefs((err,results)=>{
